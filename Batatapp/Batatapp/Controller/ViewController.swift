@@ -13,14 +13,17 @@ import RealityKit
 class ViewController: UIViewController {
     
     @IBOutlet var arView: ARView!
-    private var scene: Scene {
+    var scene: Scene {
         return arView.scene
     }
-    private var session: ARSession {
+    var session: ARSession {
         return arView.session
     }
+
+    let coachingOverlay = ARCoachingOverlayView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupCoachingOverlay()
     }
 }
