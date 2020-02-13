@@ -16,6 +16,7 @@
 		021A218D23F5DDC300AEEA29 /* MultipeerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021A218C23F5DDC300AEEA29 /* MultipeerHandler.swift */; };
 		021A218F23F5DDDC00AEEA29 /* MultipeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021A218E23F5DDDC00AEEA29 /* MultipeerManager.swift */; };
 		02FC1BB123F5DF2100117358 /* ViewController + CoachingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC1BB023F5DF2100117358 /* ViewController + CoachingOverlay.swift */; };
+		02FC1BB323F5E68C00117358 /* AnchorNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC1BB223F5E68C00117358 /* AnchorNames.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		021A218C23F5DDC300AEEA29 /* MultipeerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerHandler.swift; sourceTree = "<group>"; };
 		021A218E23F5DDDC00AEEA29 /* MultipeerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerManager.swift; sourceTree = "<group>"; };
 		02FC1BB023F5DF2100117358 /* ViewController + CoachingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + CoachingOverlay.swift"; sourceTree = "<group>"; };
+		02FC1BB223F5E68C00117358 /* AnchorNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorNames.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		021A218A23F5DD8300AEEA29 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				02FC1BB223F5E68C00117358 /* AnchorNames.swift */,
 				021A217623F5DA9000AEEA29 /* ViewController.swift */,
 				02FC1BB023F5DF2100117358 /* ViewController + CoachingOverlay.swift */,
 			);
@@ -185,6 +188,7 @@
 				02FC1BB123F5DF2100117358 /* ViewController + CoachingOverlay.swift in Sources */,
 				021A218D23F5DDC300AEEA29 /* MultipeerHandler.swift in Sources */,
 				021A217923F5DA9000AEEA29 /* Experience.rcproject in Sources */,
+				02FC1BB323F5E68C00117358 /* AnchorNames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
