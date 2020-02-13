@@ -67,28 +67,10 @@ class ViewController: UIViewController, ARSessionDelegate, MultipeerHandler {
     }
 
     @objc func handleTap(_ recognizer: UITapGestureRecognizer) {
-        let location = recognizer.location(in: arView)
 
-        if let firstResult = arView.raycast(from: location, allowing: .estimatedPlane, alignment: .horizontal).first {
-            let anchor = ARAnchor(name: AnchorNames.placement.rawValue, transform: firstResult.worldTransform)
-            session.add(anchor: anchor)
-        } else {
-            print("Warning: Object placement failed.")
-        }
     }
 
     func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
-        for anchor in anchors {
-            if anchor.name == AnchorNames.placement.rawValue {
-                let boxLength: Float = 0.05
-                let coloredCube = ModelEntity(mesh: MeshResource.generateBox(size: boxLength),
-                                              materials: [SimpleMaterial(color: .white, isMetallic: true)])
-                coloredCube.position = [0, boxLength / 2, 0]
 
-                let anchorEntity = AnchorEntity(anchor: anchor)
-                anchorEntity.addChild(coloredCube)
-                arView.scene.addAnchor(anchorEntity)
-            }
-        }
     }
 }
