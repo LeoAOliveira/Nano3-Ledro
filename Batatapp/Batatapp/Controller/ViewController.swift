@@ -47,6 +47,7 @@ class ViewController: UIViewController, ARSessionDelegate, MultipeerHandler {
     var session: ARSession {
         return arView.session
     }
+
     let coachingOverlay = ARCoachingOverlayView()
     
     override func viewDidLoad() {
@@ -71,6 +72,6 @@ class ViewController: UIViewController, ARSessionDelegate, MultipeerHandler {
     }
 
     func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
-
+        
     }
 }
