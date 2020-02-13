@@ -56,15 +56,39 @@
 		021A217323F5DA9000AEEA29 /* Batatapp */ = {
 			isa = PBXGroup;
 			children = (
-				021A217423F5DA9000AEEA29 /* AppDelegate.swift */,
-				021A217623F5DA9000AEEA29 /* ViewController.swift */,
-				021A217823F5DA9000AEEA29 /* Experience.rcproject */,
-				021A217A23F5DA9000AEEA29 /* Main.storyboard */,
-				021A217D23F5DA9000AEEA29 /* Assets.xcassets */,
-				021A217F23F5DA9000AEEA29 /* LaunchScreen.storyboard */,
-				021A218223F5DA9000AEEA29 /* Info.plist */,
+				021A218A23F5DD8300AEEA29 /* Controller */,
+				021A218923F5DD8000AEEA29 /* View */,
+				021A218823F5DD7700AEEA29 /* Model */,
 			);
 			path = Batatapp;
+			sourceTree = "<group>";
+		};
+		021A218823F5DD7700AEEA29 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				021A217423F5DA9000AEEA29 /* AppDelegate.swift */,
+				021A218223F5DA9000AEEA29 /* Info.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		021A218923F5DD8000AEEA29 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				021A217D23F5DA9000AEEA29 /* Assets.xcassets */,
+				021A217823F5DA9000AEEA29 /* Experience.rcproject */,
+				021A217F23F5DA9000AEEA29 /* LaunchScreen.storyboard */,
+				021A217A23F5DA9000AEEA29 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		021A218A23F5DD8300AEEA29 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				021A217623F5DA9000AEEA29 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
