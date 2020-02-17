@@ -15,6 +15,8 @@ class ViewController: UIViewController, ARSessionDelegate, MultipeerHandler {
 
     lazy var multipeerManager: MultipeerManager = MultipeerManager(serviceType: "potatoBomb", handler: self)
 
+    public var player: Player?
+
     func peerDiscovered(_ id: MCPeerID) -> Bool {
         return true
     }
@@ -23,10 +25,35 @@ class ViewController: UIViewController, ARSessionDelegate, MultipeerHandler {
         return true
     }
 
+    func peerJoined(_ id: MCPeerID) {
+
+        guard let player = player else {
+            fatalError("Não tinha um player")
+        }
+
+        if player.type == .host {
+
+            session.getCurrentWorldMap { (map, error) in
+
+                guard let map = map else {
+                    fatalError("Não tinha um mapa")
+                }
+
+                guard let data = try? NSKeyedArchiver.archivedData(withRootObject: map, requiringSecureCoding: true) else {
+                    fatalError("Não conseguiu codificar o mapa")
+                }
+
+                self.multipeerManager.sendToAllPeers(data, reliably: true)
+            }
+        }
+    }
+
     func session(_ session: ARSession, didOutputCollaborationData data: ARSession.CollaborationData) {
         if !multipeerManager.connectedPeers.isEmpty {
-            guard let encodedData = try? NSKeyedArchiver.archivedData(withRootObject: data, requiringSecureCoding: true)
-                else { fatalError("Unexpectedly failed to encode collaboration data.") }
+            guard let encodedData = try? NSKeyedArchiver.archivedData(withRootObject: data, requiringSecureCoding: true) else {
+                    fatalError("Unexpectedly failed to encode collaboration data.")
+
+            }
             let dataIsCritical = data.priority == .critical
             multipeerManager.sendToAllPeers(encodedData, reliably: dataIsCritical)
         }
@@ -36,9 +63,18 @@ class ViewController: UIViewController, ARSessionDelegate, MultipeerHandler {
         if let collaborationData = try? NSKeyedUnarchiver.unarchivedObject(ofClass: ARSession.CollaborationData.self, from: data) {
             session.update(with: collaborationData)
             return
+
+        } else if let worldMap = try? NSKeyedUnarchiver.unarchivedObject(ofClass: ARWorldMap.self, from: data),
+            player?.type == .join {
+
+            let configuration = ARWorldTrackingConfiguration()
+            configuration.isCollaborationEnabled = true
+            configuration.environmentTexturing = .automatic
+            configuration.initialWorldMap = worldMap
+            session.run(configuration)
+            session.delegate = self
         }
     }
-
     
     @IBOutlet var arView: ARView!
     var scene: Scene {
@@ -51,15 +87,24 @@ class ViewController: UIViewController, ARSessionDelegate, MultipeerHandler {
     let coachingOverlay = ARCoachingOverlayView()
     
     override func viewDidLoad() {
+
+        guard let player = player else {
+            fatalError("Não tinha um player")
+        }
+
         super.viewDidLoad()
+
         _ = multipeerManager
         setupCoachingOverlay()
 
-        let configuration = ARWorldTrackingConfiguration()
-        configuration.isCollaborationEnabled = true
-        configuration.environmentTexturing = .automatic
-        session.run(configuration)
-        session.delegate = self
+        if player.type == .host {
+            
+            let configuration = ARWorldTrackingConfiguration()
+            configuration.isCollaborationEnabled = true
+            configuration.environmentTexturing = .automatic
+            session.run(configuration)
+            session.delegate = self
+        }
 
         UIApplication.shared.isIdleTimerDisabled = true
 
@@ -84,3 +129,4 @@ class ViewController: UIViewController, ARSessionDelegate, MultipeerHandler {
         }
     }
 }
+

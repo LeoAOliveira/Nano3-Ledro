@@ -17,6 +17,8 @@
 		021A218F23F5DDDC00AEEA29 /* MultipeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021A218E23F5DDDC00AEEA29 /* MultipeerManager.swift */; };
 		02FC1BB123F5DF2100117358 /* ViewController + CoachingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC1BB023F5DF2100117358 /* ViewController + CoachingOverlay.swift */; };
 		02FC1BB323F5E68C00117358 /* AnchorNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC1BB223F5E68C00117358 /* AnchorNames.swift */; };
+		A7169A8E23FB071600CE5B9C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7169A8D23FB071600CE5B9C /* Player.swift */; };
+		A7E907B423FB2C730001F5EA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E907B323FB2C730001F5EA /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		021A218E23F5DDDC00AEEA29 /* MultipeerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerManager.swift; sourceTree = "<group>"; };
 		02FC1BB023F5DF2100117358 /* ViewController + CoachingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + CoachingOverlay.swift"; sourceTree = "<group>"; };
 		02FC1BB223F5E68C00117358 /* AnchorNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorNames.swift; sourceTree = "<group>"; };
+		A7169A8D23FB071600CE5B9C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		A7E907B323FB2C730001F5EA /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				02FC1BB223F5E68C00117358 /* AnchorNames.swift */,
+				A7169A8D23FB071600CE5B9C /* Player.swift */,
 				021A217623F5DA9000AEEA29 /* ViewController.swift */,
 				02FC1BB023F5DF2100117358 /* ViewController + CoachingOverlay.swift */,
+				A7E907B323FB2C730001F5EA /* MenuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,6 +192,8 @@
 				021A217523F5DA9000AEEA29 /* AppDelegate.swift in Sources */,
 				021A218F23F5DDDC00AEEA29 /* MultipeerManager.swift in Sources */,
 				02FC1BB123F5DF2100117358 /* ViewController + CoachingOverlay.swift in Sources */,
+				A7E907B423FB2C730001F5EA /* MenuViewController.swift in Sources */,
+				A7169A8E23FB071600CE5B9C /* Player.swift in Sources */,
 				021A218D23F5DDC300AEEA29 /* MultipeerHandler.swift in Sources */,
 				021A217923F5DA9000AEEA29 /* Experience.rcproject in Sources */,
 				02FC1BB323F5E68C00117358 /* AnchorNames.swift in Sources */,
@@ -333,7 +341,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BVZY57RJZG;
+				DEVELOPMENT_TEAM = 4BUKN8ST5B;
 				INFOPLIST_FILE = Batatapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -351,7 +359,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BVZY57RJZG;
+				DEVELOPMENT_TEAM = 4BUKN8ST5B;
 				INFOPLIST_FILE = Batatapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
