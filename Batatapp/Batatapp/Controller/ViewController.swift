@@ -72,6 +72,15 @@ class ViewController: UIViewController, ARSessionDelegate, MultipeerHandler {
     }
 
     func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
-        
+        for anchor in anchors {
+            if let participantAnchor = anchor as? ARParticipantAnchor {
+                let anchorEntity = AnchorEntity(anchor: participantAnchor)
+
+                let modelEntity = ModelEntity(mesh: .generateSphere(radius: 0.1), materials: [SimpleMaterial.init(color: .red, isMetallic: true)])
+                anchorEntity.addChild(modelEntity)
+
+                arView.scene.addAnchor(anchorEntity)
+            }
+        }
     }
 }
