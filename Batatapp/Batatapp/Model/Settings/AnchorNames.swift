@@ -7,5 +7,6 @@
 //
 
 public enum AnchorNames: String {
+    case camera = "Anchor for my camera"
     case placement = "Anchor for object placement"
 }

@@ -17,6 +17,7 @@
 		021A218F23F5DDDC00AEEA29 /* MultipeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021A218E23F5DDDC00AEEA29 /* MultipeerManager.swift */; };
 		024FCD8823FC4D4000E58130 /* ViewController + MultipeerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FCD8723FC4D4000E58130 /* ViewController + MultipeerHandler.swift */; };
 		024FCD8A23FC4DE900E58130 /* ViewController + ARSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FCD8923FC4DE900E58130 /* ViewController + ARSessionDelegate.swift */; };
+		024FCD9323FC5FD500E58130 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FCD9223FC5FD500E58130 /* StringExtension.swift */; };
 		02FC1BB123F5DF2100117358 /* ViewController + CoachingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC1BB023F5DF2100117358 /* ViewController + CoachingOverlay.swift */; };
 		02FC1BB323F5E68C00117358 /* AnchorNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC1BB223F5E68C00117358 /* AnchorNames.swift */; };
 		A7169A8E23FB071600CE5B9C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7169A8D23FB071600CE5B9C /* Player.swift */; };
@@ -36,6 +37,7 @@
 		021A218E23F5DDDC00AEEA29 /* MultipeerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerManager.swift; sourceTree = "<group>"; };
 		024FCD8723FC4D4000E58130 /* ViewController + MultipeerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + MultipeerHandler.swift"; sourceTree = "<group>"; };
 		024FCD8923FC4DE900E58130 /* ViewController + ARSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + ARSessionDelegate.swift"; sourceTree = "<group>"; };
+		024FCD9223FC5FD500E58130 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		02FC1BB023F5DF2100117358 /* ViewController + CoachingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + CoachingOverlay.swift"; sourceTree = "<group>"; };
 		02FC1BB223F5E68C00117358 /* AnchorNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorNames.swift; sourceTree = "<group>"; };
 		A7169A8D23FB071600CE5B9C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				024FCD8D23FC501100E58130 /* Settings */,
 				021A218B23F5DDB100AEEA29 /* Multipeer */,
 				021A217423F5DA9000AEEA29 /* AppDelegate.swift */,
+				024FCD9223FC5FD500E58130 /* StringExtension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				A7169A8E23FB071600CE5B9C /* Player.swift in Sources */,
 				021A218D23F5DDC300AEEA29 /* MultipeerHandler.swift in Sources */,
 				021A217923F5DA9000AEEA29 /* Experience.rcproject in Sources */,
+				024FCD9323FC5FD500E58130 /* StringExtension.swift in Sources */,
 				024FCD8A23FC4DE900E58130 /* ViewController + ARSessionDelegate.swift in Sources */,
 				02FC1BB323F5E68C00117358 /* AnchorNames.swift in Sources */,
 				024FCD8823FC4D4000E58130 /* ViewController + MultipeerHandler.swift in Sources */,

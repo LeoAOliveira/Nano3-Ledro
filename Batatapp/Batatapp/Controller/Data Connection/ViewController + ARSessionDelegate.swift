@@ -30,7 +30,21 @@ extension ViewController: ARSessionDelegate {
                 let modelEntity = ModelEntity(mesh: .generateSphere(radius: 0.1), materials: [SimpleMaterial.init(color: .red, isMetallic: true)])
                 anchorEntity.addChild(modelEntity)
 
-                arView.scene.addAnchor(anchorEntity)
+                scene.addAnchor(anchorEntity)
+            } else if anchor.name == AnchorNames.camera.rawValue,
+                potatoAnchor == nil {
+
+                if player?.type == PlayerType.host,
+                    let potatoScene: Experience.Scene? = try? Experience.loadScene(),
+                    let potato = potatoScene?.potato {
+                    potato.position = [0.14, 0, -0.5]
+
+                    let anchorEntity = AnchorEntity(anchor: anchor)
+                    anchorEntity.addChild(potato)
+
+                    self.potatoAnchor = anchorEntity
+                    scene.addAnchor(anchorEntity)
+                }
             }
         }
     }
@@ -46,6 +60,14 @@ extension ViewController: ARSessionDelegate {
             session.run(configuration)
         } else {
             session.pause()
+        }
+    }
+
+    func session(_ session: ARSession, didUpdate frame: ARFrame) {
+        trackingState = frame.camera.trackingState
+        if let potatoAnchor = potatoAnchor {
+            let currentTransform = frame.camera.transform
+            potatoAnchor.setTransformMatrix(currentTransform, relativeTo: nil)
         }
     }
 }
