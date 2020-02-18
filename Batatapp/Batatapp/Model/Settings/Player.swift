@@ -10,9 +10,8 @@ import MultipeerConnectivity
 import ARKit
 
 struct Player {
-    
     let id: MCPeerID
-    let type: PlayerType
+    let type: PlayerType?
 }
 
 enum PlayerType {
