@@ -35,9 +35,8 @@ extension ViewController: ARSessionDelegate {
                 potatoAnchor == nil {
 
                 if player?.type == PlayerType.host,
-                    let potatoScene: Experience.Scene? = try? Experience.loadScene(),
-                    let potato = potatoScene?.potato {
-                    potato.position = [0.14, 0, -0.5]
+                    let potato = potato {
+                    PotatoHelper.setupPotato(potato)
 
                     let anchorEntity = AnchorEntity(anchor: anchor)
                     anchorEntity.addChild(potato)
@@ -65,7 +64,7 @@ extension ViewController: ARSessionDelegate {
 
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
         trackingState = frame.camera.trackingState
-        if let potatoAnchor = potatoAnchor {
+        if let potatoAnchor = potatoAnchor, !isMoving {
             let currentTransform = frame.camera.transform
             potatoAnchor.setTransformMatrix(currentTransform, relativeTo: nil)
         }

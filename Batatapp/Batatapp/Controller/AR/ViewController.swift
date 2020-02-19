@@ -10,11 +10,14 @@ import UIKit
 import ARKit
 import RealityKit
 import MultipeerConnectivity
+import Combine
 
 class ViewController: UIViewController {
 
     lazy var multipeerManager: MultipeerManager = MultipeerManager(serviceType: "potatoBomb", handler: self)
     public var player: Player?
+
+    lazy var potato: ModelEntity? = try? ModelEntity.loadModel(named: "potato.usdz")
 
     @IBOutlet var arView: ARView!
     var scene: Scene {
@@ -71,7 +74,6 @@ class ViewController: UIViewController {
     var occlusionModel: ModelEntity = ModelEntity(mesh: .generatePlane(width: 2, height: 2), materials: [OcclusionMaterial()])
 
     func hideEverything(reason: String) {
-
         occlusionModel.position = [0,0,-0.1]
         potatoAnchor?.addChild(occlusionModel)
         print(reason)
@@ -95,6 +97,7 @@ class ViewController: UIViewController {
         }
     }
 
+    var cancellables: [AnyCancellable] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         arView.automaticallyConfigureSession = false
@@ -103,7 +106,13 @@ class ViewController: UIViewController {
         setupCoachingOverlay()
         configureSession()
 
+        scene.subscribe(to: CollisionEvents.Began.self) { (collision) in
+            print("\(collision.entityA) colidiu com \(collision.entityB)")
+        }.store(in: &cancellables)
+
         session.delegate = self
+
+
 
         UIApplication.shared.isIdleTimerDisabled = true
 
@@ -111,8 +120,13 @@ class ViewController: UIViewController {
         arView.addGestureRecognizer(gesture)
     }
 
+    var isMoving: Bool = false
     @objc func handleTap(_ recognizer: UITapGestureRecognizer) {
-
+        guard let potato = potato else {
+            fatalError("No potato tomato")
+        }
+        isMoving = !isMoving
+        PotatoHelper.throwPotato(potato, potatoAnchor)
     }
 }
 

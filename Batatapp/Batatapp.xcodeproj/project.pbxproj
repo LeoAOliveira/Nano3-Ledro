@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		021A217523F5DA9000AEEA29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021A217423F5DA9000AEEA29 /* AppDelegate.swift */; };
 		021A217723F5DA9000AEEA29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021A217623F5DA9000AEEA29 /* ViewController.swift */; };
-		021A217923F5DA9000AEEA29 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 021A217823F5DA9000AEEA29 /* Experience.rcproject */; };
 		021A217C23F5DA9000AEEA29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021A217A23F5DA9000AEEA29 /* Main.storyboard */; };
 		021A217E23F5DA9000AEEA29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 021A217D23F5DA9000AEEA29 /* Assets.xcassets */; };
 		021A218123F5DA9000AEEA29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021A217F23F5DA9000AEEA29 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,8 @@
 		024FCD8823FC4D4000E58130 /* ViewController + MultipeerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FCD8723FC4D4000E58130 /* ViewController + MultipeerHandler.swift */; };
 		024FCD8A23FC4DE900E58130 /* ViewController + ARSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FCD8923FC4DE900E58130 /* ViewController + ARSessionDelegate.swift */; };
 		024FCD9323FC5FD500E58130 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FCD9223FC5FD500E58130 /* StringExtension.swift */; };
+		02BAD68C23FDB6D200F1A2C3 /* potato.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 02BAD68B23FDB6D200F1A2C3 /* potato.usdz */; };
+		02BAD68F23FDC26400F1A2C3 /* PotatoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BAD68E23FDC26400F1A2C3 /* PotatoHelper.swift */; };
 		02FC1BB123F5DF2100117358 /* ViewController + CoachingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC1BB023F5DF2100117358 /* ViewController + CoachingOverlay.swift */; };
 		02FC1BB323F5E68C00117358 /* AnchorNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC1BB223F5E68C00117358 /* AnchorNames.swift */; };
 		A7169A8E23FB071600CE5B9C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7169A8D23FB071600CE5B9C /* Player.swift */; };
@@ -28,7 +29,6 @@
 		021A217123F5DA9000AEEA29 /* Batatapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Batatapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		021A217423F5DA9000AEEA29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		021A217623F5DA9000AEEA29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		021A217823F5DA9000AEEA29 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		021A217B23F5DA9000AEEA29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		021A217D23F5DA9000AEEA29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		021A218023F5DA9000AEEA29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +38,8 @@
 		024FCD8723FC4D4000E58130 /* ViewController + MultipeerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + MultipeerHandler.swift"; sourceTree = "<group>"; };
 		024FCD8923FC4DE900E58130 /* ViewController + ARSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + ARSessionDelegate.swift"; sourceTree = "<group>"; };
 		024FCD9223FC5FD500E58130 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		02BAD68B23FDB6D200F1A2C3 /* potato.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = potato.usdz; sourceTree = "<group>"; };
+		02BAD68E23FDC26400F1A2C3 /* PotatoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotatoHelper.swift; sourceTree = "<group>"; };
 		02FC1BB023F5DF2100117358 /* ViewController + CoachingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + CoachingOverlay.swift"; sourceTree = "<group>"; };
 		02FC1BB223F5E68C00117358 /* AnchorNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorNames.swift; sourceTree = "<group>"; };
 		A7169A8D23FB071600CE5B9C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -96,8 +98,8 @@
 		021A218923F5DD8000AEEA29 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				02BAD68D23FDC25900F1A2C3 /* Potato */,
 				021A217D23F5DA9000AEEA29 /* Assets.xcassets */,
-				021A217823F5DA9000AEEA29 /* Experience.rcproject */,
 				021A217F23F5DA9000AEEA29 /* LaunchScreen.storyboard */,
 				021A217A23F5DA9000AEEA29 /* Main.storyboard */,
 			);
@@ -156,6 +158,15 @@
 				A7E907B323FB2C730001F5EA /* MenuViewController.swift */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		02BAD68D23FDC25900F1A2C3 /* Potato */ = {
+			isa = PBXGroup;
+			children = (
+				02BAD68E23FDC26400F1A2C3 /* PotatoHelper.swift */,
+				02BAD68B23FDB6D200F1A2C3 /* potato.usdz */,
+			);
+			path = Potato;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +229,7 @@
 			files = (
 				021A218123F5DA9000AEEA29 /* LaunchScreen.storyboard in Resources */,
 				021A217E23F5DA9000AEEA29 /* Assets.xcassets in Resources */,
+				02BAD68C23FDB6D200F1A2C3 /* potato.usdz in Resources */,
 				021A217C23F5DA9000AEEA29 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,9 +248,9 @@
 				A7E907B423FB2C730001F5EA /* MenuViewController.swift in Sources */,
 				A7169A8E23FB071600CE5B9C /* Player.swift in Sources */,
 				021A218D23F5DDC300AEEA29 /* MultipeerHandler.swift in Sources */,
-				021A217923F5DA9000AEEA29 /* Experience.rcproject in Sources */,
 				024FCD9323FC5FD500E58130 /* StringExtension.swift in Sources */,
 				024FCD8A23FC4DE900E58130 /* ViewController + ARSessionDelegate.swift in Sources */,
+				02BAD68F23FDC26400F1A2C3 /* PotatoHelper.swift in Sources */,
 				02FC1BB323F5E68C00117358 /* AnchorNames.swift in Sources */,
 				024FCD8823FC4D4000E58130 /* ViewController + MultipeerHandler.swift in Sources */,
 			);
