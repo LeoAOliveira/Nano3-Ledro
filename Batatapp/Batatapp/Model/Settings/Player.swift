@@ -12,6 +12,8 @@ import ARKit
 struct Player {
     let id: MCPeerID
     let type: PlayerType?
+
+    var hasPotato: Bool = false
 }
 
 enum PlayerType {

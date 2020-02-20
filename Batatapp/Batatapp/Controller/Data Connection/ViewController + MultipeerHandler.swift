@@ -32,6 +32,25 @@ extension ViewController: MultipeerHandler {
         } else if let worldMap = try? NSKeyedUnarchiver.unarchivedObject(ofClass: ARWorldMap.self, from: data) {
             runWorld(worldMap)
             return
+        } else if let message = NSString(data: data as Data, encoding: String.Encoding.utf8.rawValue) as String? {
+            if session.identifier.uuidString == message, let potato = potato {
+                player?.hasPotato = true
+                isMoving = false
+                PotatoHelper.setupPotato(potato)
+                potatoAnchor?.addChild(potato)
+            } else if message == PotatoNames.potatoSent.rawValue,
+                let potato = potato {
+                let entity = Entity()
+                potato.anchor?.addChild(entity)
+                entity.position = [0, 0, 1]
+                PotatoHelper.mockPotatoThrow(potato, relativeTo: entity)
+                entity.removeFromParent()
+            } else if message == PotatoNames.potatoReset.rawValue,
+                let potato = potato {
+                PotatoHelper.resetPotato(potato)
+                potato.position = [-0.03, 0.5, 0]
+            }
+            return
         }
     }
 
@@ -55,10 +74,10 @@ extension ViewController: MultipeerHandler {
         if player.type == PlayerType.host {
             session.getCurrentWorldMap { (map, error) in
                 guard let map = map else {
-                    fatalError("Não tinha um mapa")
+                    return
                 }
                 guard let data = try? NSKeyedArchiver.archivedData(withRootObject: map, requiringSecureCoding: true) else {
-                    fatalError("Não foi possível codificar o mapa")
+                    return
                 }
                 self.multipeerManager.sendToPeers(data, reliably: true, peers: [id])
             }
