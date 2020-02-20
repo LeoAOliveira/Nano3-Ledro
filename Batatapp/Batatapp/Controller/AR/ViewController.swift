@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 
     lazy var multipeerManager: MultipeerManager = MultipeerManager(serviceType: "potatoBomb", handler: self)
     public var player: Player?
+    var oldPosition: SIMD3<Float> = [0, 0, 0]
 
     lazy var potato: ModelEntity? = try? ModelEntity.loadModel(named: "potato.usdz")
     var aimingEntity: Entity = Entity()
@@ -107,14 +108,13 @@ class ViewController: UIViewController {
         _ = multipeerManager
         setupCoachingOverlay()
         configureSession()
+        Audio.playBeep()
 
         scene.subscribe(to: CollisionEvents.Began.self) { (collision) in
             self.collisionBegan(event: collision)
         }.store(in: &cancellables)
 
         session.delegate = self
-
-
 
         UIApplication.shared.isIdleTimerDisabled = true
 
@@ -161,6 +161,20 @@ class ViewController: UIViewController {
             PotatoHelper.resetPotato(potato)
         }
         isMoving = !isMoving
+    }
+
+    func endGame() {
+        DispatchQueue.main.async {
+            Audio.playExplosion()
+            if self.player?.hasPotato == true {
+                let alert = UIAlertController(title: "Tururu", message: "Perdeste", preferredStyle: .alert)
+                self.present(alert, animated: true)
+            } else {
+                let alert = UIAlertController(title: "Yess", message: "Não perdeste", preferredStyle: .alert)
+                self.present(alert, animated: true)
+            }
+            self.session.pause()
+        }
     }
 }
 

@@ -46,7 +46,7 @@ public class PotatoHelper {
                 let collision = CollisionComponent(shapes: [.generateSphere(radius: 0.5)], mode: .trigger, filter: .init(group: .init(rawValue: 0), mask: .init(rawValue: 0)))
                 potato.components.set([motion, collision, body])
 
-                potato.applyImpulse([0, 4000, 0], at: [0,0,0], relativeTo: entity)
+                potato.applyImpulse([0, 4000, 2500], at: [0,0,0], relativeTo: entity)
             }
         }
     }

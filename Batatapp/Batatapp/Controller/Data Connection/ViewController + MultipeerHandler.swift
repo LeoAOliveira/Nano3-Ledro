@@ -23,6 +23,16 @@ extension ViewController: MultipeerHandler {
 
     func peerJoined(_ id: MCPeerID) {
         sendSession(to: id)
+        DispatchQueue.main.async {
+            if self.player?.type == PlayerType.host {
+                Timer.scheduledTimer(withTimeInterval: TimeInterval.random(in: 30...80), repeats: false) { (timer) in
+                    if let endGame = "endGame".data(using: .utf8, allowLossyConversion: false) {
+                        self.multipeerManager.sendToAllPeers(endGame, reliably: true)
+                    }
+                    self.endGame()
+                }
+            }
+        }
     }
 
     func receivedData(_ data: Data, from peerID: MCPeerID) {
@@ -43,12 +53,15 @@ extension ViewController: MultipeerHandler {
                 let entity = Entity()
                 potato.anchor?.addChild(entity)
                 entity.position = [0, 0, 1]
+                oldPosition = potato.position
                 PotatoHelper.mockPotatoThrow(potato, relativeTo: entity)
                 entity.removeFromParent()
             } else if message == PotatoNames.potatoReset.rawValue,
                 let potato = potato {
                 PotatoHelper.resetPotato(potato)
-                potato.position = [-0.03, 0.5, 0]
+                potato.position = oldPosition
+            } else if message == "endGame" {
+                self.endGame()
             }
             return
         }
