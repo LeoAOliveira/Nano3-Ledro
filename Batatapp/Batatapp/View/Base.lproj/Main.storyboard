@@ -15,18 +15,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUs-45-NYT">
-                                <rect key="frame" x="145" y="329" width="125" height="60"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="uux-de-BQn">
+                                <rect key="frame" x="90" y="73" width="235" height="235"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Host"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUs-45-NYT">
+                                <rect key="frame" x="116" y="401" width="183" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="host"/>
                                 <connections>
                                     <action selector="hostTap:" destination="1y9-iJ-egj" eventType="touchUpInside" id="u20-xD-Mhs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqs-i6-VRa">
-                                <rect key="frame" x="145" y="507" width="125" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqs-i6-VRa">
+                                <rect key="frame" x="116" y="556" width="183" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Join"/>
+                                <state key="normal" image="join"/>
                                 <connections>
                                     <action selector="joinTap:" destination="1y9-iJ-egj" eventType="touchUpInside" id="yjV-vs-9pw"/>
                                 </connections>
@@ -61,4 +65,9 @@
             <point key="canvasLocation" x="138" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="host" width="271" height="149"/>
+        <image name="join" width="271" height="149"/>
+        <image name="logo" width="622" height="623"/>
+    </resources>
 </document>
