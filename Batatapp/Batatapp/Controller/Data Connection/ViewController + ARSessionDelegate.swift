@@ -9,7 +9,7 @@
 import RealityKit
 import ARKit
 
-extension ViewController: ARSessionDelegate, ARSCNViewDelegate {
+extension ViewController: ARSessionDelegate {
 
     func session(_ session: ARSession, didOutputCollaborationData data: ARSession.CollaborationData) {
         if !multipeerManager.connectedPeers.isEmpty {
@@ -22,16 +22,29 @@ extension ViewController: ARSessionDelegate, ARSCNViewDelegate {
         }
     }
 
-    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        if anchor is ARParticipantAnchor {
-            let node = SCNNode(geometry: SCNSphere(radius: 2))
-            node.addChildNode(node)
-        } else if anchor.name == AnchorNames.camera.rawValue,
-            let potato = potato,
-            potato.parent == nil {
-            potato.position = SCNVector3(0.25, 0, -0.5)
-            potato.isHidden = false
-            node.addChildNode(potato)
+    func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
+        for anchor in anchors {
+            if let participantAnchor = anchor as? ARParticipantAnchor {
+                let anchorEntity = AnchorEntity(anchor: participantAnchor)
+
+                let modelEntity = ModelEntity(mesh: .generateSphere(radius: 0.1), materials: [SimpleMaterial.init(color: .red, isMetallic: true)])
+                anchorEntity.addChild(modelEntity)
+
+                scene.addAnchor(anchorEntity)
+            } else if anchor.name == AnchorNames.camera.rawValue,
+                potatoAnchor == nil {
+
+                if player?.type == PlayerType.host,
+                    let potato = potato {
+                    PotatoHelper.setupPotato(potato)
+
+                    let anchorEntity = AnchorEntity(anchor: anchor)
+                    anchorEntity.addChild(potato)
+
+                    self.potatoAnchor = anchorEntity
+                    scene.addAnchor(anchorEntity)
+                }
+            }
         }
     }
 
@@ -51,5 +64,9 @@ extension ViewController: ARSessionDelegate, ARSCNViewDelegate {
 
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
         trackingState = frame.camera.trackingState
+        if let potatoAnchor = potatoAnchor, !isMoving {
+            let currentTransform = frame.camera.transform
+            potatoAnchor.setTransformMatrix(currentTransform, relativeTo: nil)
+        }
     }
 }

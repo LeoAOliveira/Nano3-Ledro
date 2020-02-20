@@ -28,7 +28,7 @@ extension ViewController: ARCoachingOverlayViewDelegate {
         coachingOverlay.goal = .tracking
 
         coachingOverlay.translatesAutoresizingMaskIntoConstraints = false
-        scnView.addSubview(coachingOverlay)
+        arView.addSubview(coachingOverlay)
 
         NSLayoutConstraint.activate([
             coachingOverlay.centerXAnchor.constraint(equalTo: view.centerXAnchor),
