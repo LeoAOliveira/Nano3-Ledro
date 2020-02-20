@@ -19,7 +19,8 @@ extension ViewController: ARCoachingOverlayViewDelegate {
     }
 
     func coachingOverlayViewDidRequestSessionReset(_ coachingOverlayView: ARCoachingOverlayView) {
-        //Resetar tracking
+        guard let configuration = arView.session.configuration else { print("A configuration is required"); return }
+        arView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
 
     func setupCoachingOverlay() {
