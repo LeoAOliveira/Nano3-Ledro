@@ -31,7 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		021A217123F5DA9000AEEA29 /* Batatapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Batatapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		021A217123F5DA9000AEEA29 /* bARtARtAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bARtARtAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		021A217423F5DA9000AEEA29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		021A217623F5DA9000AEEA29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		021A217B23F5DA9000AEEA29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		021A217223F5DA9000AEEA29 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				021A217123F5DA9000AEEA29 /* Batatapp.app */,
+				021A217123F5DA9000AEEA29 /* bARtARtAR.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 			);
 			name = Batatapp;
 			productName = Batatapp;
-			productReference = 021A217123F5DA9000AEEA29 /* Batatapp.app */;
+			productReference = 021A217123F5DA9000AEEA29 /* bARtARtAR.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -424,7 +424,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.Batatapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = bARtARtAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -442,7 +442,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.Batatapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = bARtARtAR;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
