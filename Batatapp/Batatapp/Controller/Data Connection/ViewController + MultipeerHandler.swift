@@ -14,11 +14,11 @@ import MultipeerConnectivity
 extension ViewController: MultipeerHandler {
 
     func peerDiscovered(_ id: MCPeerID) -> Bool {
-        return true
+        return multipeerManager.connectedPeers.count < 1
     }
 
     func peerReceivedInvitation(_ id: MCPeerID) -> Bool {
-        return true
+        return multipeerManager.connectedPeers.count < 1
     }
 
     func peerJoined(_ id: MCPeerID) {
