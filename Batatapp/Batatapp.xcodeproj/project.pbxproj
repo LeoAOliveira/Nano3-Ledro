@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		021A217523F5DA9000AEEA29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021A217423F5DA9000AEEA29 /* AppDelegate.swift */; };
 		021A217723F5DA9000AEEA29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021A217623F5DA9000AEEA29 /* ViewController.swift */; };
-		021A217923F5DA9000AEEA29 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 021A217823F5DA9000AEEA29 /* Experience.rcproject */; };
 		021A217C23F5DA9000AEEA29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021A217A23F5DA9000AEEA29 /* Main.storyboard */; };
 		021A217E23F5DA9000AEEA29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 021A217D23F5DA9000AEEA29 /* Assets.xcassets */; };
 		021A218123F5DA9000AEEA29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 021A217F23F5DA9000AEEA29 /* LaunchScreen.storyboard */; };
@@ -17,17 +16,24 @@
 		021A218F23F5DDDC00AEEA29 /* MultipeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021A218E23F5DDDC00AEEA29 /* MultipeerManager.swift */; };
 		024FCD8823FC4D4000E58130 /* ViewController + MultipeerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FCD8723FC4D4000E58130 /* ViewController + MultipeerHandler.swift */; };
 		024FCD8A23FC4DE900E58130 /* ViewController + ARSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FCD8923FC4DE900E58130 /* ViewController + ARSessionDelegate.swift */; };
+		024FCD9323FC5FD500E58130 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FCD9223FC5FD500E58130 /* StringExtension.swift */; };
+		0259177023FEF4780025F9FD /* PlayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0259176F23FEF4780025F9FD /* PlayerHelper.swift */; };
+		02BAD68C23FDB6D200F1A2C3 /* potato.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 02BAD68B23FDB6D200F1A2C3 /* potato.usdz */; };
+		02BAD68F23FDC26400F1A2C3 /* PotatoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BAD68E23FDC26400F1A2C3 /* PotatoHelper.swift */; };
+		02EC33E423FF48C600E604D2 /* Audios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC33E323FF48C600E604D2 /* Audios.swift */; };
+		02EC33E623FF4A5800E604D2 /* Explosion.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 02EC33E123FF469400E604D2 /* Explosion.m4a */; };
+		02EC33EA23FF4B5900E604D2 /* Beep.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 02EC33E923FF4B5700E604D2 /* Beep.m4a */; };
 		02FC1BB123F5DF2100117358 /* ViewController + CoachingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC1BB023F5DF2100117358 /* ViewController + CoachingOverlay.swift */; };
-		02FC1BB323F5E68C00117358 /* AnchorNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC1BB223F5E68C00117358 /* AnchorNames.swift */; };
+		02FC1BB323F5E68C00117358 /* MessagesNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC1BB223F5E68C00117358 /* MessagesNames.swift */; };
 		A7169A8E23FB071600CE5B9C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7169A8D23FB071600CE5B9C /* Player.swift */; };
+		A7AE889F23FF7E65002C7D01 /* gloves.usdz in Resources */ = {isa = PBXBuildFile; fileRef = A7AE889E23FF7E65002C7D01 /* gloves.usdz */; };
 		A7E907B423FB2C730001F5EA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E907B323FB2C730001F5EA /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		021A217123F5DA9000AEEA29 /* Batatapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Batatapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		021A217123F5DA9000AEEA29 /* bARtARtAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bARtARtAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		021A217423F5DA9000AEEA29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		021A217623F5DA9000AEEA29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		021A217823F5DA9000AEEA29 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		021A217B23F5DA9000AEEA29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		021A217D23F5DA9000AEEA29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		021A218023F5DA9000AEEA29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,9 +42,17 @@
 		021A218E23F5DDDC00AEEA29 /* MultipeerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerManager.swift; sourceTree = "<group>"; };
 		024FCD8723FC4D4000E58130 /* ViewController + MultipeerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + MultipeerHandler.swift"; sourceTree = "<group>"; };
 		024FCD8923FC4DE900E58130 /* ViewController + ARSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + ARSessionDelegate.swift"; sourceTree = "<group>"; };
+		024FCD9223FC5FD500E58130 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		0259176F23FEF4780025F9FD /* PlayerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHelper.swift; sourceTree = "<group>"; };
+		02BAD68B23FDB6D200F1A2C3 /* potato.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = potato.usdz; sourceTree = "<group>"; };
+		02BAD68E23FDC26400F1A2C3 /* PotatoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotatoHelper.swift; sourceTree = "<group>"; };
+		02EC33E123FF469400E604D2 /* Explosion.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Explosion.m4a; sourceTree = "<group>"; };
+		02EC33E323FF48C600E604D2 /* Audios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audios.swift; sourceTree = "<group>"; };
+		02EC33E923FF4B5700E604D2 /* Beep.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Beep.m4a; sourceTree = "<group>"; };
 		02FC1BB023F5DF2100117358 /* ViewController + CoachingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + CoachingOverlay.swift"; sourceTree = "<group>"; };
-		02FC1BB223F5E68C00117358 /* AnchorNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorNames.swift; sourceTree = "<group>"; };
+		02FC1BB223F5E68C00117358 /* MessagesNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesNames.swift; sourceTree = "<group>"; };
 		A7169A8D23FB071600CE5B9C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		A7AE889E23FF7E65002C7D01 /* gloves.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gloves.usdz; sourceTree = "<group>"; };
 		A7E907B323FB2C730001F5EA /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +78,7 @@
 		021A217223F5DA9000AEEA29 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				021A217123F5DA9000AEEA29 /* Batatapp.app */,
+				021A217123F5DA9000AEEA29 /* bARtARtAR.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +86,8 @@
 		021A217323F5DA9000AEEA29 /* Batatapp */ = {
 			isa = PBXGroup;
 			children = (
+				02EC33E923FF4B5700E604D2 /* Beep.m4a */,
+				02EC33E123FF469400E604D2 /* Explosion.m4a */,
 				021A218A23F5DD8300AEEA29 /* Controller */,
 				021A218923F5DD8000AEEA29 /* View */,
 				021A218823F5DD7700AEEA29 /* Model */,
@@ -86,6 +102,7 @@
 				024FCD8D23FC501100E58130 /* Settings */,
 				021A218B23F5DDB100AEEA29 /* Multipeer */,
 				021A217423F5DA9000AEEA29 /* AppDelegate.swift */,
+				024FCD9223FC5FD500E58130 /* StringExtension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -93,8 +110,9 @@
 		021A218923F5DD8000AEEA29 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0259176F23FEF4780025F9FD /* PlayerHelper.swift */,
+				02BAD68D23FDC25900F1A2C3 /* Potato */,
 				021A217D23F5DA9000AEEA29 /* Assets.xcassets */,
-				021A217823F5DA9000AEEA29 /* Experience.rcproject */,
 				021A217F23F5DA9000AEEA29 /* LaunchScreen.storyboard */,
 				021A217A23F5DA9000AEEA29 /* Main.storyboard */,
 			);
@@ -107,6 +125,7 @@
 				024FCD8F23FC505500E58130 /* Storyboards */,
 				024FCD8E23FC503E00E58130 /* AR */,
 				024FCD8B23FC4FE000E58130 /* Data Connection */,
+				02EC33E323FF48C600E604D2 /* Audios.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -133,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				A7169A8D23FB071600CE5B9C /* Player.swift */,
-				02FC1BB223F5E68C00117358 /* AnchorNames.swift */,
+				02FC1BB223F5E68C00117358 /* MessagesNames.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -155,6 +174,16 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		02BAD68D23FDC25900F1A2C3 /* Potato */ = {
+			isa = PBXGroup;
+			children = (
+				02BAD68E23FDC26400F1A2C3 /* PotatoHelper.swift */,
+				02BAD68B23FDB6D200F1A2C3 /* potato.usdz */,
+				A7AE889E23FF7E65002C7D01 /* gloves.usdz */,
+			);
+			path = Potato;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,7 +201,7 @@
 			);
 			name = Batatapp;
 			productName = Batatapp;
-			productReference = 021A217123F5DA9000AEEA29 /* Batatapp.app */;
+			productReference = 021A217123F5DA9000AEEA29 /* bARtARtAR.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -215,6 +244,10 @@
 			files = (
 				021A218123F5DA9000AEEA29 /* LaunchScreen.storyboard in Resources */,
 				021A217E23F5DA9000AEEA29 /* Assets.xcassets in Resources */,
+				A7AE889F23FF7E65002C7D01 /* gloves.usdz in Resources */,
+				02EC33EA23FF4B5900E604D2 /* Beep.m4a in Resources */,
+				02EC33E623FF4A5800E604D2 /* Explosion.m4a in Resources */,
+				02BAD68C23FDB6D200F1A2C3 /* potato.usdz in Resources */,
 				021A217C23F5DA9000AEEA29 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,9 +266,12 @@
 				A7E907B423FB2C730001F5EA /* MenuViewController.swift in Sources */,
 				A7169A8E23FB071600CE5B9C /* Player.swift in Sources */,
 				021A218D23F5DDC300AEEA29 /* MultipeerHandler.swift in Sources */,
-				021A217923F5DA9000AEEA29 /* Experience.rcproject in Sources */,
+				024FCD9323FC5FD500E58130 /* StringExtension.swift in Sources */,
+				0259177023FEF4780025F9FD /* PlayerHelper.swift in Sources */,
 				024FCD8A23FC4DE900E58130 /* ViewController + ARSessionDelegate.swift in Sources */,
-				02FC1BB323F5E68C00117358 /* AnchorNames.swift in Sources */,
+				02BAD68F23FDC26400F1A2C3 /* PotatoHelper.swift in Sources */,
+				02FC1BB323F5E68C00117358 /* MessagesNames.swift in Sources */,
+				02EC33E423FF48C600E604D2 /* Audios.swift in Sources */,
 				024FCD8823FC4D4000E58130 /* ViewController + MultipeerHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,16 +417,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BVZY57RJZG;
+				DEVELOPMENT_TEAM = 4BUKN8ST5B;
 				INFOPLIST_FILE = Batatapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.Batatapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = bARtARtAR;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -399,16 +435,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BVZY57RJZG;
+				DEVELOPMENT_TEAM = 4BUKN8ST5B;
 				INFOPLIST_FILE = Batatapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = PGF.Batatapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = bARtARtAR;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

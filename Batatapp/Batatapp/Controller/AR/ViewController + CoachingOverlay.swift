@@ -11,15 +11,16 @@ import ARKit
 
 extension ViewController: ARCoachingOverlayViewDelegate {
     func coachingOverlayViewWillActivate(_ coachingOverlayView: ARCoachingOverlayView) {
-        //Esconder tudo
+        hideEverything(reason: "Coach")
     }
 
     func coachingOverlayViewDidDeactivate(_ coachingOverlayView: ARCoachingOverlayView) {
-        //Mostrar tudo
+        showEverything()
     }
 
     func coachingOverlayViewDidRequestSessionReset(_ coachingOverlayView: ARCoachingOverlayView) {
-        //Resetar tracking
+        guard let configuration = arView.session.configuration else { print("A configuration is required"); return }
+        arView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
 
     func setupCoachingOverlay() {
